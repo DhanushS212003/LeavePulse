@@ -4,11 +4,15 @@ import "./Login.css";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle login logic here
     console.log("Login submitted");
+    console.log("Email:", email);
+    console.log("Password:", password);
   };
 
   const togglePasswordVisibility = () => {
@@ -39,6 +43,8 @@ const Login = () => {
                   type="email"
                   className="login-field"
                   placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -49,6 +55,8 @@ const Login = () => {
                   type={showPassword ? "text" : "password"}
                   className="login-field"
                   placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                 />
               </div>
