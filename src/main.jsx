@@ -2,7 +2,7 @@ import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import { routes } from "./routes";
-import "bootstrap/dist/css/bootstrap.min.css";
+import './index.css'
 
 const router = createBrowserRouter(routes);
 

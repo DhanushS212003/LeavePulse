@@ -1,5 +1,7 @@
+import Layout from "./common/Layout";
+
 function App() {
-  return <h1>LeavePulse</h1>;
+  return <Layout />;
 }
 
 export default App;
