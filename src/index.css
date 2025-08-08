@@ -393,3 +393,7 @@ h3 {
 body {
   font-family: 'Noto Sans', sans-serif;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

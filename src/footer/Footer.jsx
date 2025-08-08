@@ -9,13 +9,16 @@ const Footer = () => {
   ];
 
   return (
-    <div class="footer">
-      <div class="copyright_container">
-        <p class="copyright"> ©2023 LeavePulse.com. All rights reserved. </p>
+    <div className="footer">
+      <div className="copyright_container">
+        <p className="copyright">
+          {" "}
+          ©2023 LeavePulse.com. All rights reserved.{" "}
+        </p>
       </div>
-      <div class="footer_links_container">
+      <div className="footer_links_container">
         {socialMediaIcons.map((icon) => (
-          <i key={icon.key} class={icon.class}></i>
+          <i key={icon.key} className={icon.class}></i>
         ))}
       </div>
     </div>
