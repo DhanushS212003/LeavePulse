@@ -38,7 +38,7 @@ const Header = () => {
   }, [isProfileOpen]);
 
   return (
-    <>
+    <div className="header_section">
       <div className="header">
         <div className="logo_container">
           <h2 className="logo">
@@ -89,7 +89,7 @@ const Header = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
