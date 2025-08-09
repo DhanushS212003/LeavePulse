@@ -38,19 +38,11 @@ const Header = () => {
   }, [isProfileOpen]);
 
   return (
-    <div className="header_section">
+    <>
       <div className="header">
-        <div className="logo_container">
-          <h2 className="logo">
-            <a
-              onClick={handleLogoClick}
-              className="anchor_logo"
-              style={{ cursor: "pointer" }}
-            >
-              LeavePulse
-            </a>
-          </h2>
-        </div>
+        <h2 className="logo" onClick={handleLogoClick}>
+          LeavePulse
+        </h2>
 
         <div className="profile_container" onClick={toggleProfileContainer}>
           <img src={profile_logo} className="profile_photo" alt="Profile" />
@@ -89,7 +81,7 @@ const Header = () => {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

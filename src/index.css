@@ -397,3 +397,12 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.body_section {
+  display: flex;
+}
+
+.main_section {
+  flex-grow: 1;
+  padding: 30px;
+}

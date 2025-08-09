@@ -17,14 +17,14 @@ const SideBar = () => {
 
   return (
     <div className="sidebar_section">
-      <div className="sidebar_row_container" onClick={() => navigate("/")}>
-        <div className="sidebar_icon_container">
-          <i className="fa-solid fa-house"></i>
+      {[0, 1, 2, 3, 4, 5].map((i) => (
+        <div className="sidebar_row_container" onClick={() => navigate("/")}>
+          <div className="sidebar_icon_container">
+            <i className="fa-solid fa-house"></i>
+          </div>
+          <p> Dashboard {i} </p>
         </div>
-        <div>
-          <p className="sidebar_link"> Dashboard </p>
-        </div>
-      </div>
+      ))}
 
       <div
         className="sidebar_row_container"
@@ -33,9 +33,7 @@ const SideBar = () => {
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-address-card"></i>
         </div>
-        <div>
-          <p className="sidebar_link"> Role </p>
-        </div>
+        <p> Role </p>
       </div>
 
       <div
@@ -45,9 +43,7 @@ const SideBar = () => {
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-rectangle-list"></i>
         </div>
-        <div>
-          <p className="sidebar_link"> Leave Type </p>
-        </div>
+        <p> Leave Type </p>
       </div>
 
       <div
@@ -58,14 +54,12 @@ const SideBar = () => {
           <i className="fa-solid fa-users-rectangle"></i>
         </div>
         <div className="link_container">
-          <p className="sidebar_link"> Employees </p>
-          <div className="chevron_container">
-            <i
-              className={`fa-solid fa-chevron-${
-                isEmployeeExpanded ? "up" : "down"
-              }`}
-            ></i>
-          </div>
+          <p> Employees </p>
+          <i
+            className={`fa-solid fa-chevron-${
+              isEmployeeExpanded ? "up" : "down"
+            }`}
+          />
         </div>
       </div>
 
@@ -75,24 +69,16 @@ const SideBar = () => {
             className="hidden_list_container"
             onClick={() => navigate("/createemployee")}
           >
-            <div className="sidebar_hidden_icon_container">
-              <i className="fa-regular fa-circle-dot"></i>
-            </div>
-            <div className="link_container">
-              <p className="hidden_link"> New Employee </p>
-            </div>
+            <i className="fa-regular fa-circle-dot"></i>
+            <p> New Employee </p>
           </div>
 
           <div
             className="hidden_list_container"
             onClick={() => navigate("/manageemployee")}
           >
-            <div className="sidebar_hidden_icon_container">
-              <i className="fa-regular fa-circle-dot"></i>
-            </div>
-            <div className="link_container">
-              <p className="hidden_link"> Manage Employee </p>
-            </div>
+            <i className="fa-regular fa-circle-dot"></i>
+            <p> Manage Employee </p>
           </div>
         </>
       )}
@@ -105,14 +91,10 @@ const SideBar = () => {
           <i className="fa-solid fa-calendar-check"></i>
         </div>
         <div className="link_container">
-          <p className="sidebar_link"> Leave </p>
-          <div className="chevron_container">
-            <i
-              className={`fa-solid fa-chevron-${
-                isLeaveExpanded ? "up" : "down"
-              }`}
-            ></i>
-          </div>
+          <p> Leave </p>
+          <i
+            className={`fa-solid fa-chevron-${isLeaveExpanded ? "up" : "down"}`}
+          ></i>
         </div>
       </div>
 
@@ -122,24 +104,16 @@ const SideBar = () => {
             className="hidden_list_container"
             onClick={() => navigate("/applyleave")}
           >
-            <div className="sidebar_hidden_icon_container">
-              <i className="fa-regular fa-circle-dot"></i>
-            </div>
-            <div className="link_container">
-              <p className="hidden_link"> Apply Leave </p>
-            </div>
+            <i className="fa-regular fa-circle-dot"></i>
+            <p> Apply Leave </p>
           </div>
 
           <div
             className="hidden_list_container"
             onClick={() => navigate("/allleave")}
           >
-            <div className="sidebar_hidden_icon_container">
-              <i className="fa-regular fa-circle-dot"></i>
-            </div>
-            <div className="link_container">
-              <p className="hidden_link"> All Leave </p>
-            </div>
+            <i className="fa-regular fa-circle-dot"></i>
+            <p> All Leave </p>
           </div>
         </>
       )}
@@ -151,9 +125,7 @@ const SideBar = () => {
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-calendar-days"></i>
         </div>
-        <div>
-          <p className="sidebar_link"> Calendar </p>
-        </div>
+        <p> Calendar </p>
       </div>
 
       <div
@@ -163,18 +135,14 @@ const SideBar = () => {
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-bell"></i>
         </div>
-        <div>
-          <p className="sidebar_link"> Notification </p>
-        </div>
+        <p> Notification </p>
       </div>
 
       <div className="sidebar_row_container" onClick={() => navigate("/role")}>
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-book"></i>
         </div>
-        <div>
-          <p className="sidebar_link"> Visit Us </p>
-        </div>
+        <p> Visit Us </p>
       </div>
     </div>
   );

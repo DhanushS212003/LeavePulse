@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import login_section from "../assets/img/login_section.png";
+import img from "../assets/img/login_section.png";
 import "./login.css";
 
 const Login = () => {
@@ -24,7 +24,7 @@ const Login = () => {
       <div className="login-row">
         {/* Image Section */}
         <div className="login-image-container">
-          <img src={login_section} alt="Login" className="login-image" />
+          <img src={img} alt="Login" className="login-image" />
         </div>
 
         {/* Form Section */}
