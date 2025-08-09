@@ -3,8 +3,8 @@ import "./dashboard.css";
 
 const Dashboard = () => {
   return (
-    <div className="page_section">
-      {/* <div className="poster_container">
+    <>
+      <div className="poster_container">
         <div className="poster_image_container">
           <img src={banner} className="banner_img" alt="Banner" />
         </div>
@@ -16,52 +16,50 @@ const Dashboard = () => {
             non repellendus debitis iure, doloremque assumenda.
           </p>
         </div>
-      </div> */}
+      </div>
 
-      {[0, 1, 2, 3, 4, 5].map((i) => (
-        <div className="info_container">
-          <div className="individual_info_container">
-            <div className="count_container">
-              <span className="count">7</span>
-              <p className="count_title">Total Employees</p>
-            </div>
-            <div className="image_container">
-              <i className="fa-regular fa-file-waveform"></i>
-            </div>
+      {/* <div className="info_container">
+        <div className="individual_info_container">
+          <div className="count_container">
+            <span className="count">7</span>
+            <p className="count_title">Total Employees</p>
           </div>
-
-          <div className="individual_info_container">
-            <div className="count_container">
-              <span className="count">4</span>
-              <p className="count_title">Approved Leave</p>
-            </div>
-            <div className="image_container">
-              <i className="fa-regular fa-circle-check"></i>
-            </div>
-          </div>
-
-          <div className="individual_info_container">
-            <div className="count_container">
-              <span className="count">2</span>
-              <p className="count_title">Pending Leave</p>
-            </div>
-            <div className="image_container">
-              <i className="fa-regular fa-circle-question"></i>
-            </div>
-          </div>
-
-          <div className="individual_info_container">
-            <div className="count_container">
-              <span className="count">5</span>
-              <p className="count_title">Rejected Leave</p>
-            </div>
-            <div className="image_container">
-              <i className="fa-regular fa-circle-xmark"></i>
-            </div>
+          <div className="image_container">
+            <i className="fa-regular fa-file-waveform"></i>
           </div>
         </div>
-      ))}
-    </div>
+
+        <div className="individual_info_container">
+          <div className="count_container">
+            <span className="count">4</span>
+            <p className="count_title">Approved Leave</p>
+          </div>
+          <div className="image_container">
+            <i className="fa-regular fa-circle-check"></i>
+          </div>
+        </div>
+
+        <div className="individual_info_container">
+          <div className="count_container">
+            <span className="count">2</span>
+            <p className="count_title">Pending Leave</p>
+          </div>
+          <div className="image_container">
+            <i className="fa-regular fa-circle-question"></i>
+          </div>
+        </div>
+
+        <div className="individual_info_container">
+          <div className="count_container">
+            <span className="count">5</span>
+            <p className="count_title">Rejected Leave</p>
+          </div>
+          <div className="image_container">
+            <i className="fa-regular fa-circle-xmark"></i>
+          </div>
+        </div>
+      </div> */}
+    </>
   );
 };
 

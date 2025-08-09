@@ -17,14 +17,12 @@ const SideBar = () => {
 
   return (
     <div className="sidebar_section">
-      {[0, 1, 2, 3, 4, 5].map((i) => (
-        <div className="sidebar_row_container" onClick={() => navigate("/")}>
-          <div className="sidebar_icon_container">
-            <i className="fa-solid fa-house"></i>
-          </div>
-          <p> Dashboard {i} </p>
+      <div className="sidebar_row_container" onClick={() => navigate("/")}>
+        <div className="sidebar_icon_container">
+          <i className="fa-solid fa-house"></i>
         </div>
-      ))}
+        <p> Dashboard </p>
+      </div>
 
       <div
         className="sidebar_row_container"

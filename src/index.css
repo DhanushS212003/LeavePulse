@@ -395,14 +395,30 @@ body {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
 
 .body_section {
   display: flex;
+  height: calc(100vh - 57px);
 }
 
 .main_section {
   flex-grow: 1;
   padding: 30px;
+  overflow-y: auto;
 }

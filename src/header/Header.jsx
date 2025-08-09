@@ -38,7 +38,7 @@ const Header = () => {
   }, [isProfileOpen]);
 
   return (
-    <>
+    <div className="header_section">
       <div className="header">
         <h2 className="logo" onClick={handleLogoClick}>
           LeavePulse
@@ -81,7 +81,7 @@ const Header = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
