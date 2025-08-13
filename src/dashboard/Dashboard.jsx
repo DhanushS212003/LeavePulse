@@ -2,64 +2,41 @@ import banner from "../assets/img/dashboard_banner.png";
 import "./dashboard.css";
 
 const Dashboard = () => {
+  const info = [
+    { title: "Total Employees", count: 7, icon: "fa-regular fa-circle-user" },
+    { title: "Approved Leave", count: 4, icon: "fa-regular fa-circle-check" },
+    { title: "Pending Leave", count: 2, icon: "fa-regular fa-circle-question" },
+    { title: "Rejected Leave", count: 5, icon: "fa-regular fa-circle-xmark" },
+  ];
+
   return (
-    <>
-      <div className="poster_container">
-        <div className="poster_image_container">
-          <img src={banner} className="banner_img" alt="Banner" />
-        </div>
-        <div className="poster_content_container">
+    <div className="dashboard_section">
+      <div className="banner_container">
+        <img src={banner} className="banner_img" alt="Banner" />
+        <div>
           <p className="welcome_tag">Welcome Back</p>
-          <h2 className="poster_user_name">Mary Fernadoes</h2>
-          <p className="poster_line">
+          <h2 className="banner_user_name">Mary Fernadoes</h2>
+          <p className="banner_line">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde hic
             non repellendus debitis iure, doloremque assumenda.
           </p>
         </div>
       </div>
 
-      {/* <div className="info_container">
-        <div className="individual_info_container">
-          <div className="count_container">
-            <span className="count">7</span>
-            <p className="count_title">Total Employees</p>
+      <div className="info_containers">
+        {info.map(({ title, count, icon }, index) => (
+          <div className="info_container" key={index}>
+            <div className="count_container">
+              <span className="count">{count}</span>
+              <p className="count_title">{title}</p>
+            </div>
+            <div className="icon_container">
+              <i className={icon} />
+            </div>
           </div>
-          <div className="image_container">
-            <i className="fa-regular fa-file-waveform"></i>
-          </div>
-        </div>
-
-        <div className="individual_info_container">
-          <div className="count_container">
-            <span className="count">4</span>
-            <p className="count_title">Approved Leave</p>
-          </div>
-          <div className="image_container">
-            <i className="fa-regular fa-circle-check"></i>
-          </div>
-        </div>
-
-        <div className="individual_info_container">
-          <div className="count_container">
-            <span className="count">2</span>
-            <p className="count_title">Pending Leave</p>
-          </div>
-          <div className="image_container">
-            <i className="fa-regular fa-circle-question"></i>
-          </div>
-        </div>
-
-        <div className="individual_info_container">
-          <div className="count_container">
-            <span className="count">5</span>
-            <p className="count_title">Rejected Leave</p>
-          </div>
-          <div className="image_container">
-            <i className="fa-regular fa-circle-xmark"></i>
-          </div>
-        </div>
-      </div> */}
-    </>
+        ))}
+      </div>
+    </div>
   );
 };
 
