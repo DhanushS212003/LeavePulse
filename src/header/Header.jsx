@@ -57,27 +57,21 @@ const Header = () => {
             <div className="icon_container">
               <i className="fa-solid fa-user"></i>
             </div>
-            <div>
-              <p className="dropdown_list">Profile</p>
-            </div>
+            <p>Profile</p>
           </div>
 
           <div className="dropdown_list_container">
             <div className="icon_container">
               <i className="fa-solid fa-key"></i>
             </div>
-            <div>
-              <p className="dropdown_list">Reset Password</p>
-            </div>
+            <p>Reset Password</p>
           </div>
 
           <div className="dropdown_list_container">
             <div className="icon_container">
               <i className="fa-solid fa-right-from-bracket"></i>
             </div>
-            <div>
-              <p className="dropdown_list">Log Out</p>
-            </div>
+            <p>Log Out</p>
           </div>
         </div>
       )}

@@ -3,18 +3,20 @@
   justify-content: space-between;
   background-color: white;
   border-radius: 10px;
-  padding: 30px 60px;
+  padding: 24px 40px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-top: 40px;
+  margin-top: 32px;
 
   .copyright {
-    color: black;
+    color: gray;
+    font-weight: 500;
+    font-size: 14px;
   }
 
   .footer_links_container {
-    width: 18%;
     display: flex;
     justify-content: space-between;
+    gap: 24px;
   }
 
   .fa-facebook,

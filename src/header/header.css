@@ -24,8 +24,8 @@
   }
 
   .profile_photo {
-    height: 40px;
-    width: 45px;
+    height: 35px;
+    width: 40px;
   }
 
   .user_name {
@@ -46,7 +46,7 @@
   .dropdown_list_container {
     display: flex;
     align-items: center;
-    padding: 0px 20px;
+    padding: 12px 14px;
     border-radius: 10px;
   }
 
@@ -57,10 +57,6 @@
 
   .icon_container {
     margin-right: 15px;
-  }
-
-  .dropdown_list {
-    margin: 14px 0px;
   }
 
   .fa-solid,
@@ -82,9 +78,6 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-    /* box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px; */
-    /* box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px; */
   }
 
   .breadcrumbs {

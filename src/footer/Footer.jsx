@@ -10,12 +10,7 @@ const Footer = () => {
 
   return (
     <div className="footer">
-      <div className="copyright_container">
-        <p className="copyright">
-          {" "}
-          ©2023 LeavePulse.com. All rights reserved.{" "}
-        </p>
-      </div>
+      <p className="copyright"> ©2023 LeavePulse.com. All rights reserved. </p>
       <div className="footer_links_container">
         {socialMediaIcons.map((icon) => (
           <i key={icon.key} className={icon.class}></i>

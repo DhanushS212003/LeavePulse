@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../header/Header";
 import SideBar from "../sidebar/SideBar";
+import Footer from "../footer/Footer";
 import "../index.css";
 
 const Layout = () => {
@@ -12,6 +13,7 @@ const Layout = () => {
         <SideBar />
         <div className="main_section">
           <Outlet />
+          <Footer />
         </div>
       </div>
     </>
