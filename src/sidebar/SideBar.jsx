@@ -24,10 +24,7 @@ const SideBar = () => {
         <p> Dashboard </p>
       </div>
 
-      <div
-        className="sidebar_row_container"
-        onClick={() => navigate("/role?page=role")}
-      >
+      <div className="sidebar_row_container" onClick={() => navigate("/roles")}>
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-address-card"></i>
         </div>
@@ -36,7 +33,7 @@ const SideBar = () => {
 
       <div
         className="sidebar_row_container"
-        onClick={() => navigate("/role?page=leavetype")}
+        onClick={() => navigate("/leaves")}
       >
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-rectangle-list"></i>
@@ -65,7 +62,7 @@ const SideBar = () => {
         <>
           <div
             className="hidden_list_container"
-            onClick={() => navigate("/createemployee")}
+            onClick={() => navigate("/create_employee")}
           >
             <i className="fa-regular fa-circle-dot"></i>
             <p> New Employee </p>
@@ -73,7 +70,7 @@ const SideBar = () => {
 
           <div
             className="hidden_list_container"
-            onClick={() => navigate("/manageemployee")}
+            onClick={() => navigate("/employees")}
           >
             <i className="fa-regular fa-circle-dot"></i>
             <p> Manage Employee </p>
@@ -100,7 +97,7 @@ const SideBar = () => {
         <>
           <div
             className="hidden_list_container"
-            onClick={() => navigate("/applyleave")}
+            onClick={() => navigate("/apply_leave")}
           >
             <i className="fa-regular fa-circle-dot"></i>
             <p> Apply Leave </p>
@@ -108,7 +105,7 @@ const SideBar = () => {
 
           <div
             className="hidden_list_container"
-            onClick={() => navigate("/allleave")}
+            onClick={() => navigate("/my_leaves")}
           >
             <i className="fa-regular fa-circle-dot"></i>
             <p> All Leave </p>
@@ -136,7 +133,7 @@ const SideBar = () => {
         <p> Notification </p>
       </div>
 
-      <div className="sidebar_row_container" onClick={() => navigate("/role")}>
+      <div className="sidebar_row_container">
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-book"></i>
         </div>

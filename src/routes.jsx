@@ -1,6 +1,7 @@
 import App from "./App";
 import Dashboard from "./dashboard/Dashboard";
 import Login from "./login/Login";
+import Role from "./role/Role";
 
 export const routes = [
   {
@@ -10,6 +11,10 @@ export const routes = [
       {
         path: "",
         element: <Dashboard />,
+      },
+      {
+        path: "roles",
+        element: <Role />,
       },
     ],
   },

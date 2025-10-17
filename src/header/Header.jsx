@@ -20,6 +20,11 @@ const Header = () => {
     setIsProfileOpen(false);
   };
 
+  const handleLogOutClick = () => {
+    navigate("/login");
+    setIsProfileOpen(false);
+  };
+
   // Handle Escape key press
   useEffect(() => {
     const handleEscapeKey = (event) => {
@@ -67,7 +72,7 @@ const Header = () => {
             <p>Reset Password</p>
           </div>
 
-          <div className="dropdown_list_container">
+          <div className="dropdown_list_container" onClick={handleLogOutClick}>
             <div className="icon_container">
               <i className="fa-solid fa-right-from-bracket"></i>
             </div>
