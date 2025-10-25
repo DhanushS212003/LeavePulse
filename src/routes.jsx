@@ -2,6 +2,7 @@ import App from "./App";
 import Dashboard from "./dashboard/Dashboard";
 import Login from "./login/Login";
 import Role from "./role/Role";
+import Leave from "./leave/Leave";
 
 export const routes = [
   {
@@ -15,6 +16,10 @@ export const routes = [
       {
         path: "roles",
         element: <Role />,
+      },
+      {
+        path: "leaves",
+        element: <Leave />,
       },
     ],
   },

@@ -1,20 +1,20 @@
-import "./role.css";
+import "../role/role.css";
 import BreadCrumb from "../breadcrumb/Breadcrumb";
 
-const Role = () => {
+const Leave = () => {
   return (
     <>
-      <BreadCrumb title="Role List" path="Dashboard > Role Module" />
+      <BreadCrumb title="Leave List" path="Dashboard > Leave Module" />
 
-      <div className="role_section">
-        <h2>New Role</h2>
+      <div className="leave_section">
+        <h2>New Leave</h2>
         <form>
           <div>
-            <label> Role Name </label>
+            <label> Leave Name </label>
             <input type="text" />
           </div>
           <div>
-            <label> Role Id </label>
+            <label> Days </label>
             <input type="text" />
           </div>
           <button className="submit_btn"> Submit </button>
@@ -24,4 +24,4 @@ const Role = () => {
   );
 };
 
-export default Role;
+export default Leave;
