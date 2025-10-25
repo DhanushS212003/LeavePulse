@@ -3,6 +3,7 @@ import Dashboard from "./dashboard/Dashboard";
 import Login from "./login/Login";
 import Role from "./role/Role";
 import Leave from "./leave/Leave";
+import Employee from "./employee/Employee";
 
 export const routes = [
   {
@@ -20,6 +21,10 @@ export const routes = [
       {
         path: "leaves",
         element: <Leave />,
+      },
+      {
+        path: "new_employee",
+        element: <Employee />,
       },
     ],
   },

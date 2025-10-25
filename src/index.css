@@ -423,14 +423,16 @@ body {
   overflow-y: auto;
 }
 
-input {
+input,
+textarea {
   padding: 7px 12px;
   outline: none;
   border-radius: 4px;
   border: 1px solid gray;
 }
 
-input:focus-within {
+input:focus-within,
+textarea:focus-within {
   outline: 1.5px solid #2d7474;
 }
 

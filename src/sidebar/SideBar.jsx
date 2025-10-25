@@ -62,7 +62,7 @@ const SideBar = () => {
         <>
           <div
             className="hidden_list_container"
-            onClick={() => navigate("/create_employee")}
+            onClick={() => navigate("/new_employee")}
           >
             <i className="fa-regular fa-circle-dot"></i>
             <p> New Employee </p>
