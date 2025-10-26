@@ -12,7 +12,11 @@ const LeaveForm = () => {
           <div className="fields_container">
             <div className="field_container">
               <label> Leave Type </label>
-              <input type="text" />
+              <select>
+                <option>Casual Leave</option>
+                <option>Sick Leave</option>
+                <option>Compensatory Off</option>
+              </select>
             </div>
             <div className="field_container">
               <label> Available Leave Days </label>

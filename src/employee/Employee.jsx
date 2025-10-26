@@ -32,7 +32,11 @@ const Employee = () => {
             </div>
             <div className="field_container">
               <label> Role </label>
-              <input type="text" />
+              <select>
+                <option>Manager</option>
+                <option>Developer</option>
+                <option>Designer</option>
+              </select>
             </div>
           </div>
           <div className="footer_container">

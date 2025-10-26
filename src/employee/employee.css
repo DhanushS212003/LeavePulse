@@ -16,7 +16,8 @@
     flex-direction: column;
   }
 
-  input {
+  input,
+  select {
     margin-top: 6px;
   }
 
