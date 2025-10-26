@@ -34,9 +34,23 @@
     height: 100px;
   }
 
+  @media (max-width: 1142px) {
+    .footer_container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .submit_btn {
+      width: 160px;
+    }
+  }
+
   @media (max-width: 872px) {
     .footer_container {
       grid-template-columns: 1fr;
+    }
+
+    .submit_btn {
+      width: 100%
     }
   }
 }

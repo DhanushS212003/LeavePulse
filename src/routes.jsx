@@ -4,6 +4,7 @@ import Login from "./login/Login";
 import Role from "./role/Role";
 import Leave from "./leave/Leave";
 import Employee from "./employee/Employee";
+import LeaveForm from "./leave_form/LeaveForm";
 
 export const routes = [
   {
@@ -25,6 +26,10 @@ export const routes = [
       {
         path: "new_employee",
         element: <Employee />,
+      },
+      {
+        path: "apply_leave",
+        element: <LeaveForm />,
       },
     ],
   },
