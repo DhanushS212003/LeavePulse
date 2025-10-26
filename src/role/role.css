@@ -12,7 +12,24 @@
     align-items: center;
   }
 
-  input {
-    margin-left: 10px;
+  form>div {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 6px;
+  }
+
+  @media (max-width: 1150px) {
+    form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      align-items: end;
+    }
+
+    form>div {
+      flex-direction: column;
+      align-items: normal;
+    }
   }
 }
