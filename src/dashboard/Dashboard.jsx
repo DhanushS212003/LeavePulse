@@ -1,5 +1,6 @@
 import banner from "../assets/img/dashboard_banner.png";
 import "./dashboard.css";
+import Table from "../table/Table";
 
 const Dashboard = () => {
   const info = [
@@ -7,6 +8,20 @@ const Dashboard = () => {
     { title: "Approved Leave", count: 4, icon: "fa-regular fa-circle-check" },
     { title: "Pending Leave", count: 2, icon: "fa-regular fa-circle-question" },
     { title: "Rejected Leave", count: 5, icon: "fa-regular fa-circle-xmark" },
+  ];
+
+  const columns = ["Name", "Leave Type", "Applied Date", "Status", "Action"];
+
+  const data = [
+    ["Dhanush", "Casual Leave", "2023-08-26", "Pending", "Edit"],
+    ["Surya", "Sick Leave", "2023-08-23", "Pending", "Edit"],
+    ["Vijay", "Personal Leave", "2023-08-18", "Accepted", "Edit"],
+  ];
+
+  const filters = [
+    { id: "approved", text: "Approved Leave" },
+    { id: "pending", text: "Pending Leave" },
+    { id: "rejected", text: "Rejected Leave" },
   ];
 
   return (
@@ -36,6 +51,8 @@ const Dashboard = () => {
           </div>
         ))}
       </div>
+
+      <Table columns={columns} data={data} filters={filters} />
     </div>
   );
 };

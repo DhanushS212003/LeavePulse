@@ -1,0 +1,113 @@
+.table_container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-top: 24px;
+
+  .table_header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .search_container {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-right: 15px;
+  }
+
+  .search_container:focus-within {
+    outline: 1.5px solid #2d7474;
+  }
+
+  .search_bar {
+    height: 34px;
+    border: 0;
+  }
+
+  .search_bar:focus-within {
+    outline: none;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  .filter_container {
+    position: relative;
+  }
+
+  .filter_btn {
+    padding: 7px 10px;
+    background: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+
+  .filter_btn:hover {
+    background-color: #dcdcdc38;
+    cursor: pointer;
+  }
+
+  .fa-angle-down {
+    margin-left: 5px;
+  }
+
+  .filter_dropdown_container {
+    position: absolute;
+    right: 0;
+    /* width: 150px; */
+    font-size: 14px;
+    line-height: 28px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    border-radius: 5px;
+    padding: 10px 12px 10px 20px;
+    background: white;
+  }
+
+  .filter_dropdown_container>div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .filter_dropdown_container>div>label {
+    text-wrap: nowrap;
+  }
+
+  input[type="checkbox"]:focus-within {
+    outline: none;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border: 1px solid #EEEEEE;
+  }
+
+  .table thead {
+    background-color: darkslategray;
+    color: white;
+  }
+
+  .table th {
+    padding: 16px 0;
+    font-weight: normal;
+  }
+
+  .table th,
+  .table td {
+    text-align: center;
+    border-bottom: 1px solid #EEEEEE;
+  }
+
+  .table td {
+    padding: 14px 0;
+  }
+
+  .table tbody tr:nth-of-type(odd) {
+    background: #EEEEEE;
+  }
+}
