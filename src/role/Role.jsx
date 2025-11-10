@@ -1,7 +1,21 @@
 import "./role.css";
 import BreadCrumb from "../breadcrumb/Breadcrumb";
+import Table from "../table/Table";
 
 const Role = () => {
+  const columns = ["Role", "Id", "Action"];
+
+  const sortableColumns = [
+    { column: "Role", type: "string" },
+    { column: "Id", type: "string" },
+  ];
+
+  const data = [
+    ["CEO", "D0001", "Edit"],
+    ["Manager", "D0002", "Edit"],
+    ["Developer", "D0003", "Edit"],
+  ];
+
   return (
     <>
       <BreadCrumb title="Role List" path="Dashboard > Role Module" />
@@ -20,6 +34,8 @@ const Role = () => {
           <button className="submit_btn"> Submit </button>
         </form>
       </div>
+
+      <Table columns={columns} data={data} sortableColumns={sortableColumns} />
     </>
   );
 };

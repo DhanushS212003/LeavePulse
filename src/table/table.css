@@ -97,6 +97,16 @@
     font-weight: normal;
   }
 
+  .table_header_btn {
+    display: inline-flex;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+  }
+
   .table th,
   .table td {
     text-align: center;

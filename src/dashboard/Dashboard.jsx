@@ -12,10 +12,17 @@ const Dashboard = () => {
 
   const columns = ["Name", "Leave Type", "Applied Date", "Status", "Action"];
 
+  const sortableColumns = [
+    { column: "Name", type: "string" },
+    { column: "Leave Type", type: "string" },
+    { column: "Applied Date", type: "date" },
+    { column: "Status", type: "string" },
+  ];
+
   const data = [
-    ["Dhanush", "Casual Leave", "2023-08-26", "Pending", "Edit"],
-    ["Surya", "Sick Leave", "2023-08-23", "Pending", "Edit"],
-    ["Vijay", "Personal Leave", "2023-08-18", "Accepted", "Edit"],
+    ["Dhanush", "Casual Leave", "2025-08-26", "Pending", "Edit"],
+    ["Surya", "Sick Leave", "2025-08-23", "Pending", "Edit"],
+    ["Vijay", "Personal Leave", "2025-08-18", "Accepted", "Edit"],
   ];
 
   const filters = [
@@ -52,7 +59,12 @@ const Dashboard = () => {
         ))}
       </div>
 
-      <Table columns={columns} data={data} filters={filters} />
+      <Table
+        columns={columns}
+        data={data}
+        filters={filters}
+        sortableColumns={sortableColumns}
+      />
     </div>
   );
 };
