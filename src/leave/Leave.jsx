@@ -1,7 +1,20 @@
 import "../role/role.css";
 import BreadCrumb from "../breadcrumb/Breadcrumb";
+import Table from "../table/Table";
 
 const Leave = () => {
+  const columns = [
+    { column: "Leave", type: "string" },
+    { column: "Count (per year)", type: "string" },
+    { column: "Action" },
+  ];
+
+  const data = [
+    ["Sick Leave", "12", "Edit"],
+    ["Casual Leave", "12", "Edit"],
+    ["Personal Leave", "12", "Edit"],
+  ];
+
   return (
     <>
       <BreadCrumb title="Leave List" path="Dashboard > Leave Module" />
@@ -20,6 +33,8 @@ const Leave = () => {
           <button className="submit_btn"> Submit </button>
         </form>
       </div>
+
+      <Table columns={columns} data={data} />
     </>
   );
 };

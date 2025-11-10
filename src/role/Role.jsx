@@ -3,11 +3,10 @@ import BreadCrumb from "../breadcrumb/Breadcrumb";
 import Table from "../table/Table";
 
 const Role = () => {
-  const columns = ["Role", "Id", "Action"];
-
-  const sortableColumns = [
-    { column: "Role", type: "string" },
-    { column: "Id", type: "string" },
+  const columns = [
+    { column: "Role", sorting: true, type: "string" },
+    { column: "Id", sorting: true, type: "string" },
+    { column: "Action" },
   ];
 
   const data = [
@@ -35,7 +34,7 @@ const Role = () => {
         </form>
       </div>
 
-      <Table columns={columns} data={data} sortableColumns={sortableColumns} />
+      <Table columns={columns} data={data} />
     </>
   );
 };

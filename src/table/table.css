@@ -1,4 +1,4 @@
-.table_container {
+.table_section {
   background: white;
   padding: 20px;
   border-radius: 10px;
@@ -9,6 +9,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
   }
 
   .search_container {
@@ -80,11 +82,17 @@
     outline: none;
   }
 
+  .table_container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 15px;
+  }
+
   .table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
     border: 1px solid #EEEEEE;
+    min-width: 700px;
   }
 
   .table thead {

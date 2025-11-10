@@ -1,36 +1,23 @@
 import { useMemo, useState } from "react";
 import "./table.css";
 
-const Table = ({
-  columns = [],
-  data = [],
-  filters = [],
-  sortableColumns = [],
-}) => {
+const Table = ({ columns = [], data = [], filters = [] }) => {
   const [showFilters, setShowFilters] = useState(false);
   const [sortConfig, setSortConfig] = useState({
     column: null,
     direction: "asc",
   });
 
-  const sortableConfigByName = useMemo(() => {
-    const configMap = new Map();
-
-    sortableColumns.forEach(({ column, type }) => {
-      configMap.set(column, type);
-    });
-
-    return configMap;
-  }, [sortableColumns]);
-
   const sortedData = useMemo(() => {
     const { column, direction } = sortConfig;
 
-    if (!column || !sortableConfigByName.has(column)) return data;
+    if (!column) return data;
 
-    const columnIndex = columns.findIndex((col) => col === column);
+    const columnConfig = columns.find((col) => col.column === column);
+    if (!columnConfig || !columnConfig.sorting) return data;
 
-    const sortType = sortableConfigByName.get(column);
+    const columnIndex = columns.findIndex((col) => col.column === column);
+    const sortType = columnConfig.type || "string";
     const directionMultiplier = direction === "asc" ? 1 : -1;
 
     const compareValues = (aValue, bValue) => {
@@ -53,7 +40,7 @@ const Table = ({
     return [...data].sort((rowA, rowB) =>
       compareValues(rowA?.[columnIndex], rowB?.[columnIndex])
     );
-  }, [columns, data, sortConfig, sortableConfigByName]);
+  }, [columns, data, sortConfig]);
 
   const handleSort = (columnName) => {
     setSortConfig((prev) => {
@@ -72,7 +59,7 @@ const Table = ({
   };
 
   return (
-    <div className="table_container">
+    <div className="table_section">
       <div className="table_header_container">
         <h2> Latest Leaves </h2>
         <div className="search_container">
@@ -102,47 +89,49 @@ const Table = ({
       </div>
 
       {columns.length > 0 && data.length > 0 && (
-        <table className="table">
-          <thead>
-            <tr>
-              <th>S.No</th>
-              {columns.map((column, index) => (
-                <th key={index}>
-                  {sortableConfigByName.has(column) ? (
-                    <button
-                      type="button"
-                      className="table_header_btn"
-                      onClick={() => handleSort(column)}
-                    >
-                      {column}
-                      <i
-                        className={`sort fa-solid ${
-                          sortConfig.column === column
-                            ? sortConfig.direction === "asc"
-                              ? "fa-sort-up"
-                              : "fa-sort-down"
-                            : "fa-sort"
-                        }`}
-                      />
-                    </button>
-                  ) : (
-                    column
-                  )}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {sortedData.map((e, index) => (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                {e.map((res, i) => (
-                  <td key={i}>{res}</td>
+        <div className="table_container">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                {columns.map((columnConfig, index) => (
+                  <th key={index}>
+                    {columnConfig.sorting ? (
+                      <button
+                        type="button"
+                        className="table_header_btn"
+                        onClick={() => handleSort(columnConfig.column)}
+                      >
+                        {columnConfig.column}
+                        <i
+                          className={`sort fa-solid ${
+                            sortConfig.column === columnConfig.column
+                              ? sortConfig.direction === "asc"
+                                ? "fa-sort-up"
+                                : "fa-sort-down"
+                              : "fa-sort"
+                          }`}
+                        />
+                      </button>
+                    ) : (
+                      columnConfig.column
+                    )}
+                  </th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {sortedData.map((e, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  {e.map((res, i) => (
+                    <td key={i}>{res}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );
