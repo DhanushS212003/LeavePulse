@@ -1,0 +1,26 @@
+.page_not_found_section {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+
+
+  h1 {
+    font-size: 150px;
+    text-shadow: 2px 2px 0 midnightblue, 4px 4px 0 #fff, 8px 8px 0 midnightblue;
+    line-height: 1;
+    color: #181f48;
+    letter-spacing: 10px;
+  }
+
+  h3 {
+    margin: 30px 0px 20px 0px;
+    letter-spacing: 1px;
+    color: gray;
+  }
+
+  p {
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+}

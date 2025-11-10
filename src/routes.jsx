@@ -5,6 +5,7 @@ import Role from "./role/Role";
 import Leave from "./leave/Leave";
 import Employee from "./employee/Employee";
 import LeaveForm from "./leave_form/LeaveForm";
+import PageNotFound from "./error/PageNotFound";
 
 export const routes = [
   {
@@ -37,4 +38,5 @@ export const routes = [
     path: "login",
     element: <Login />,
   },
+  { path: "*", element: <PageNotFound /> },
 ];
