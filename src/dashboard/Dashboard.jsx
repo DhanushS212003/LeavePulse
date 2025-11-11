@@ -19,9 +19,9 @@ const Dashboard = () => {
   ];
 
   const data = [
-    ["Dhanush", "Casual Leave", "2025-08-26", "Pending", "Edit"],
-    ["Surya", "Sick Leave", "2025-08-23", "Pending", "Edit"],
-    ["Vijay", "Personal Leave", "2025-08-18", "Accepted", "Edit"],
+    ["Surya", "Sick Leave", "2025-08-26", "Pending", "Edit"],
+    ["Dhanush", "Casual Leave", "2025-08-23", "Accepted", "Edit"],
+    ["Vijay", "Personal Leave", "2025-08-18", "Pending", "Edit"],
   ];
 
   const filters = [
@@ -29,6 +29,19 @@ const Dashboard = () => {
     { id: "pending", text: "Pending Leave" },
     { id: "rejected", text: "Rejected Leave" },
   ];
+
+  const getfilterChild = () => {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", rowGap: "8px" }}>
+        {filters.map((e, index) => (
+          <div key={index} style={{ display: "flex", gap: "12px" }}>
+            <input id={e.id} type="checkbox" />
+            <label htmlFor={e.id}>{e.text}</label>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <>
@@ -60,7 +73,13 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <Table columns={columns} data={data} filters={filters} />
+      <Table
+        header="Latest Leaves"
+        columns={columns}
+        data={data}
+        filters={filters}
+        filterChild={getfilterChild}
+      />
     </>
   );
 };

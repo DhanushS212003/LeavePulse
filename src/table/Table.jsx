@@ -1,7 +1,13 @@
 import { useMemo, useState } from "react";
 import "./table.css";
 
-const Table = ({ columns = [], data = [], filters = [] }) => {
+const Table = ({
+  header,
+  columns = [],
+  data = [],
+  filters = [],
+  filterChild,
+}) => {
   const [showFilters, setShowFilters] = useState(false);
   const [sortConfig, setSortConfig] = useState({
     column: null,
@@ -61,7 +67,7 @@ const Table = ({ columns = [], data = [], filters = [] }) => {
   return (
     <div className="table_section">
       <div className="table_header_container">
-        <h2> Latest Leaves </h2>
+        <h2> {header} </h2>
         <div className="search_container">
           <input type="search" placeholder="Search" className="search_bar" />
           <i className="fa-solid fa-magnifying-glass" />
@@ -72,17 +78,13 @@ const Table = ({ columns = [], data = [], filters = [] }) => {
               className="filter_btn"
               onClick={() => setShowFilters(!showFilters)}
             >
-              Filter by <i className="fa-solid fa-angle-down"></i>
+              <i
+                className="fa-solid fa-filter"
+                style={{ color: "darkslategray" }}
+              />
             </button>
             {showFilters && (
-              <div className="filter_dropdown_container">
-                {filters.map((e, index) => (
-                  <div key={index}>
-                    <input id={e.id} type="checkbox" />
-                    <label htmlFor={e.id}>{e.text}</label>
-                  </div>
-                ))}
-              </div>
+              <div className="filter_dropdown_container">{filterChild()}</div>
             )}
           </div>
         )}

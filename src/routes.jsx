@@ -6,6 +6,7 @@ import Leave from "./leave/Leave";
 import Employee from "./employee/Employee";
 import LeaveForm from "./leave_form/LeaveForm";
 import PageNotFound from "./error/PageNotFound";
+import Employees from "./employee/Employees";
 
 export const routes = [
   {
@@ -31,6 +32,10 @@ export const routes = [
       {
         path: "apply_leave",
         element: <LeaveForm />,
+      },
+      {
+        path: "employees",
+        element: <Employees />,
       },
     ],
   },

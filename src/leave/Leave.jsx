@@ -34,7 +34,7 @@ const Leave = () => {
         </form>
       </div>
 
-      <Table columns={columns} data={data} />
+      <Table header="Leave List" columns={columns} data={data} />
     </>
   );
 };

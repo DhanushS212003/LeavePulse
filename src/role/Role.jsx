@@ -34,7 +34,7 @@ const Role = () => {
         </form>
       </div>
 
-      <Table columns={columns} data={data} />
+      <Table header="Role List" columns={columns} data={data} />
     </>
   );
 };
