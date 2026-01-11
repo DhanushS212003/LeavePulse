@@ -9,6 +9,7 @@ import PageNotFound from "./error/PageNotFound";
 import Employees from "./employee/Employees";
 import MyLeaves from "./leave/MyLeaves";
 import Notifications from "./notification/Notifications";
+import Profile from "./profile/Profile";
 
 export const routes = [
   {
@@ -23,6 +24,7 @@ export const routes = [
       { path: "employees", element: <Employees /> },
       { path: "my_leaves", element: <MyLeaves /> },
       { path: "notifications", element: <Notifications /> },
+      { path: "profile", element: <Profile /> },
     ],
   },
   { path: "login", element: <Login /> },
