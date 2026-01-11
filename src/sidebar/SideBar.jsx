@@ -28,7 +28,7 @@ const SideBar = () => {
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-address-card"></i>
         </div>
-        <p> Role </p>
+        <p> Roles </p>
       </div>
 
       <div
@@ -38,7 +38,7 @@ const SideBar = () => {
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-rectangle-list"></i>
         </div>
-        <p> Leave Type </p>
+        <p> Leave Types </p>
       </div>
 
       <div
@@ -86,7 +86,7 @@ const SideBar = () => {
           <i className="fa-solid fa-calendar-check"></i>
         </div>
         <div className="link_container">
-          <p> Leave </p>
+          <p> Leaves </p>
           <i
             className={`fa-solid fa-chevron-${isLeaveExpanded ? "up" : "down"}`}
           ></i>
@@ -108,7 +108,7 @@ const SideBar = () => {
             onClick={() => navigate("/my_leaves")}
           >
             <i className="fa-regular fa-circle-dot"></i>
-            <p> All Leave </p>
+            <p> My Leave </p>
           </div>
         </>
       )}
@@ -125,12 +125,12 @@ const SideBar = () => {
 
       <div
         className="sidebar_row_container"
-        onClick={() => navigate("/notification")}
+        onClick={() => navigate("/notifications")}
       >
         <div className="sidebar_icon_container">
           <i className="fa-solid fa-bell"></i>
         </div>
-        <p> Notification </p>
+        <p> Notifications </p>
       </div>
 
       <div className="sidebar_row_container">
