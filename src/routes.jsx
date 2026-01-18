@@ -11,6 +11,7 @@ import MyLeaves from "./leave/MyLeaves";
 import Notifications from "./notification/Notifications";
 import Profile from "./profile/Profile";
 import Calendar from "./calendar/Calendar";
+import ProductOverview from "./product_overview/ProductOverview";
 
 export const routes = [
   {
@@ -27,6 +28,7 @@ export const routes = [
       { path: "notifications", element: <Notifications /> },
       { path: "profile", element: <Profile /> },
       { path: "calendar", element: <Calendar /> },
+      { path: "product_overview", element: <ProductOverview /> },
     ],
   },
   { path: "login", element: <Login /> },

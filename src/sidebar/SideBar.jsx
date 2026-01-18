@@ -133,11 +133,14 @@ const SideBar = () => {
         <p> Notifications </p>
       </div>
 
-      <div className="sidebar_row_container">
+      <div
+        className="sidebar_row_container"
+        onClick={() => navigate("/product_overview")}
+      >
         <div className="sidebar_icon_container">
-          <i className="fa-solid fa-book"></i>
+          <i className="fa-solid fa-display"></i>
         </div>
-        <p> Visit Us </p>
+        <p> Product Overview </p>
       </div>
     </div>
   );
