@@ -11,9 +11,9 @@ const Employees = () => {
   ];
 
   const data = [
-    ["Dhanush", "dhanush@gmail.com", "Manager", "2025-01-10", "Edit"],
-    ["Surya", "surya@gmail.com", "Developer", "2024-11-05", "Edit"],
-    ["Vijay", "vijay@gmail.com", "Designer", "2025-08-01", "Edit"],
+    ["Arya Stark", "aryastark@gmail.com", "Manager", "2025-01-10", "Edit"],
+    ["Jon Snow", "jonsnow@gmail.com", "Developer", "2024-11-05", "Edit"],
+    ["Jamie Lannister", "jamielannister@gmail.com", "Designer", "2025-08-01", "Edit"],
   ];
 
   const filters = [

@@ -11,7 +11,7 @@ const Profile = () => {
         <div className="profile_container">
           <img src={profile_logo} className="profile_img" />
           <p style={{ color: "darkslategray", fontWeight: "600" }}>
-            Welcome Mary
+            Welcome Jon Snow
           </p>
         </div>
 
@@ -19,15 +19,15 @@ const Profile = () => {
           <div className="fields_container">
             <div className="field_container">
               <label> First Name </label>
-              <input type="text" defaultValue="Mary" />
+              <input type="text" defaultValue="Jon" />
             </div>
             <div className="field_container">
               <label> Last Name </label>
-              <input type="text" defaultValue="Fernadoes" />
+              <input type="text" defaultValue="Snow" />
             </div>
             <div className="field_container">
               <label> Email </label>
-              <input type="text" defaultValue="mary.fernadoes@gmail.com" />
+              <input type="text" defaultValue="jonsnow@gmail.com" />
             </div>
             <div className="field_container">
               <label> Phone No </label>
@@ -35,7 +35,7 @@ const Profile = () => {
             </div>
             <div className="field_container">
               <label> Role </label>
-              <input type="text" defaultValue="Manager" />
+              <input type="text" defaultValue="Developer" />
             </div>
             <div className="field_container">
               <label> Available leave days </label>

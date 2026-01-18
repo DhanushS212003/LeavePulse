@@ -51,7 +51,7 @@ const Header = () => {
 
         <div className="profile_container" onClick={toggleProfileContainer}>
           <img src={profile_logo} className="profile_photo" alt="Profile" />
-          <p className="user_name">Mary Fernadoes</p>
+          <p className="user_name">Jon Snow</p>
           <i className="fa-solid fa-caret-down"></i>
         </div>
       </div>

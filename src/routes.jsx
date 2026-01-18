@@ -10,6 +10,7 @@ import Employees from "./employee/Employees";
 import MyLeaves from "./leave/MyLeaves";
 import Notifications from "./notification/Notifications";
 import Profile from "./profile/Profile";
+import Calendar from "./calendar/Calendar";
 
 export const routes = [
   {
@@ -25,6 +26,7 @@ export const routes = [
       { path: "my_leaves", element: <MyLeaves /> },
       { path: "notifications", element: <Notifications /> },
       { path: "profile", element: <Profile /> },
+      { path: "calendar", element: <Calendar /> },
     ],
   },
   { path: "login", element: <Login /> },

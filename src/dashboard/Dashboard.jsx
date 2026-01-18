@@ -19,9 +19,9 @@ const Dashboard = () => {
   ];
 
   const data = [
-    ["Surya", "Sick Leave", "2025-08-26", "Pending", "Edit"],
-    ["Dhanush", "Casual Leave", "2025-08-23", "Accepted", "Edit"],
-    ["Vijay", "Personal Leave", "2025-08-18", "Pending", "Edit"],
+    ["Jon Snow", "Sick Leave", "2025-08-26", "Pending", "Edit"],
+    ["Arya Stark", "Casual Leave", "2025-08-23", "Accepted", "Edit"],
+    ["Jamie Lannister", "Personal Leave", "2025-08-18", "Pending", "Edit"],
   ];
 
   const filters = [
@@ -50,7 +50,7 @@ const Dashboard = () => {
           <img src={banner} className="banner_img" alt="Banner" />
           <div>
             <p className="welcome_tag">Welcome Back</p>
-            <h2 className="banner_user_name">Mary Fernadoes</h2>
+            <h2 className="banner_user_name">Jon Snow</h2>
             <p className="banner_line">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde hic
               non repellendus debitis iure, doloremque assumenda.
